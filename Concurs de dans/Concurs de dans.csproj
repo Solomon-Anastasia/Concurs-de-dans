@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{655B0244-2D77-498B-9FBE-1DDB80D1D9AE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Concurs_de_dans</RootNamespace>
+    <AssemblyName>Concurs de dans</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConcursDeDansForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConcursDeDansForm.Designer.cs">
+      <DependentUpon>ConcursDeDansForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\LogInCaAdministratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\LogInCaAdministratorForm.Designer.cs">
+      <DependentUpon>LogInCaAdministratorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DatabaseTables\Dancer.cs" />
+    <Compile Include="MenuStripForms\DansatoriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuStripForms\DansatoriForm.Designer.cs">
+      <DependentUpon>DansatoriForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DatabaseManipulation\DataAccess.cs" />
+    <Compile Include="Classes\DatabaseManipulation\Helper.cs" />
+    <Compile Include="MenuStripForms\CategoriiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuStripForms\CategoriiForm.Designer.cs">
+      <DependentUpon>CategoriiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuStripForms\TipuriDeDansForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuStripForms\TipuriDeDansForm.Designer.cs">
+      <DependentUpon>TipuriDeDansForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\PremiiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\PremiiForm.Designer.cs">
+      <DependentUpon>PremiiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\CeaMaiTanaraDansatoareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\CeaMaiTanaraDansatoareForm.Designer.cs">
+      <DependentUpon>CeaMaiTanaraDansatoareForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\DansatoriCuInstitutiaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\DansatoriCuInstitutiaForm.Designer.cs">
+      <DependentUpon>DansatoriCuInstitutiaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\DansatoriDupaCategoriiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\DansatoriDupaCategoriiForm.Designer.cs">
+      <DependentUpon>DansatoriDupaCategoriiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\DansatorTanarBatranForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\DansatorTanarBatranForm.Designer.cs">
+      <DependentUpon>DansatorTanarBatranForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\DateDeContactInTabelaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\DateDeContactInTabelaForm.Designer.cs">
+      <DependentUpon>DateDeContactInTabelaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\ExcludereDansatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\ExcludereDansatorForm.Designer.cs">
+      <DependentUpon>ExcludereDansatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\ExportaDansatoareAniForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\ExportaDansatoareAniForm.Designer.cs">
+      <DependentUpon>ExportaDansatoareAniForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\InregistrareDansatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\InregistrareDansatorForm.Designer.cs">
+      <DependentUpon>InregistrareDansatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\ListaConcursurilorCuDansatoriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\ListaConcursurilorCuDansatoriForm.Designer.cs">
+      <DependentUpon>ListaConcursurilorCuDansatoriForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\OrdonareAscendentDupaVarstaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\OrdonareAscendentDupaVarstaForm.Designer.cs">
+      <DependentUpon>OrdonareAscendentDupaVarstaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\VarstaMedieABarbatilorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\VarstaMedieABarbatilorForm.Designer.cs">
+      <DependentUpon>VarstaMedieABarbatilorForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ConcursDeDansForm.resx">
+      <DependentUpon>ConcursDeDansForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\LogInCaAdministratorForm.resx">
+      <DependentUpon>LogInCaAdministratorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuStripForms\CategoriiForm.resx">
+      <DependentUpon>CategoriiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuStripForms\DansatoriForm.resx">
+      <DependentUpon>DansatoriForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuStripForms\TipuriDeDansForm.resx">
+      <DependentUpon>TipuriDeDansForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\PremiiForm.resx">
+      <DependentUpon>PremiiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tasks\CeaMaiTanaraDansatoareForm.resx">
+      <DependentUpon>CeaMaiTanaraDansatoareForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\DansatoriCuInstitutiaForm.resx">
+      <DependentUpon>DansatoriCuInstitutiaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\DansatoriDupaCategoriiForm.resx">
+      <DependentUpon>DansatoriDupaCategoriiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\DansatorTanarBatranForm.resx">
+      <DependentUpon>DansatorTanarBatranForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\DateDeContactInTabelaForm.resx">
+      <DependentUpon>DateDeContactInTabelaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\ExcludereDansatorForm.resx">
+      <DependentUpon>ExcludereDansatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\ExportaDansatoareAniForm.resx">
+      <DependentUpon>ExportaDansatoareAniForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\InregistrareDansatorForm.resx">
+      <DependentUpon>InregistrareDansatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\ListaConcursurilorCuDansatoriForm.resx">
+      <DependentUpon>ListaConcursurilorCuDansatoriForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\OrdonareAscendentDupaVarstaForm.resx">
+      <DependentUpon>OrdonareAscendentDupaVarstaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\VarstaMedieABarbatilorForm.resx">
+      <DependentUpon>VarstaMedieABarbatilorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dancer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="select dancer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="young dancer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="average.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="contacts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="select institution.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="prize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="competition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flamenco-dancers-silhouettes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="competition page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dancers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LogInPicture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="loginAdmin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="contact.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
